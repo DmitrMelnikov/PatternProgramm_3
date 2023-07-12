@@ -18,22 +18,13 @@ public class Randoms implements Iterable<Integer> {
 
             @Override
             public boolean hasNext() {
-                if (num == 100) {
-                    return false;
-                } else {
-                    return true;
-                }
+                return true;
             }
 
             @Override
             public Integer next() {
-                if (num == 100) {
-                    System.out.println("Выпало число 100, давайте на этом закончим");
-                    return null;
-                } else {
-                    num = random.nextInt((max - min) + 1) + min;
-                    return num;
-                }
+                num = random.nextInt((max - min) + 1) + min;
+                return num;
             }
         };
     }
